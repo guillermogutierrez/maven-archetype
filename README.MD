@@ -2,7 +2,7 @@
 
 Maven archetype created from the repo https://github.com/amido/stacks-java
 
-## Steps done
+## How the Archetype has been created from the original repo
 
 1. Clone the repo
 2. Create a pom.xml file in the root folder. The archetype plugin needs a pom.xml file to create the initial template.
@@ -114,7 +114,7 @@ ENTRYPOINT ["java","-cp","app:app/lib/*","${package}.Application"]
 </fileSet>
 ```   
 
-9. At this point the archetype is ready to use, but we can move it into its own project.
+9. At this point the archetype is ready to use, so let's move it into its own project.
 
 ```shell
 cp -r ../stacks-java/target/generated-sources/archetype {PATH_TO_DESIRED_FOLDER}
@@ -126,8 +126,41 @@ cp -r ../stacks-java/target/generated-sources/archetype {PATH_TO_DESIRED_FOLDER}
 cd  {PATH_TO_DESIRED_FOLDER}
 mvn install
 ```
+# How to test the archetype
+The maven archetype plugin already provides testing functionalities as described in https://maven.apache.org/archetype/maven-archetype-plugin/integration-test-mojo.html
+Two additional configurations have been added into the project:
+1. basic. Default properties, the plugin defines
+```properties
+package=it.pkg
+groupId=archetype.it
+apiPath=/v1/menu
+artifactId=basic
+version=0.1-SNAPSHOT
+```
+2. custom-api. Custom value for the apiPath property to test custom properties
+```properties
+package=it.pkg
+groupId=archetype.it
+apiPath=/v1/custom
+artifactId=basic
+version=0.2-SNAPSHOT
+```
+Goals for both tests are the same
+```properties
+test
+```
+You can run both test with the integration-test goal
+```shell
+mvn integration-test
+```
+# How to use the archetype
+Install the archetype in your local repo
 
-11. Now you're ready to use the new archetype to create projects based on the amido-stacks repo by running
+```shell
+cd  {PATH_TO_ARCHETYPE_ROOT_FOLDER}
+mvn install
+```
+Once the archetype has been installed in your local repo, you're ready to use the new archetype to create projects based on the amido-stacks repo by running
 
 ```shell
 mvn archetype:generate -DarchetypeGroupId='com.amido' -DarchetypeArtifactId='stacks-api-archetype' -DarchetypeVersion='1.0.7-SNAPSHOT' -DgroupId='org.guillo' -DartifactId='stacks-test' -Dversion='1.0.0-SNAPSHOT' -Dpackage='org.guillo.test.api'
