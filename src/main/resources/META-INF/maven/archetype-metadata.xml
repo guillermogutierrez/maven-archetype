@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archetype-descriptor xsi:schemaLocation="https://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.1.0 http://maven.apache.org/xsd/archetype-descriptor-1.1.0.xsd" name="stacks-api"
+    xmlns="https://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.1.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <requiredProperties>
+    <requiredProperty key="apiPath">
+      <defaultValue>/v1/menu</defaultValue>
+    </requiredProperty>
+  </requiredProperties>
+  <fileSets>
+    <fileSet filtered="true" encoding="UTF-8">
+      <directory>api-tests</directory>
+      <includes>
+        <include>**/*.xml</include>
+        <include>**/*.md</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="true" encoding="UTF-8">
+      <directory>api-tests/src</directory>
+      <includes>
+        <include>**/*.java</include>
+        <include>**/*.md</include>
+        <include>**/*.xml</include>
+        <include>**/*.properties</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="true" encoding="UTF-8">
+      <directory>api-tests-karate/.mvn</directory>
+      <includes>
+        <include>**/*.properties</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="true" encoding="UTF-8">
+      <directory>api-tests-karate</directory>
+      <includes>
+        <include>**/*.xml</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="true" encoding="UTF-8">
+      <directory>java</directory>
+      <includes>
+        <include>**/Dockerfile</include>
+        <include>**/*.xml</include>
+        <include>**/*.properties</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="true" encoding="UTF-8">
+      <directory>java/.mvn</directory>
+      <includes>
+        <include>**/*.properties</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="true" encoding="UTF-8">
+      <directory>tools/formatter</directory>
+      <includes>
+        <include>**/*.xml</include>
+      </includes>
+    </fileSet>
+<!--    <fileSet filtered="true" encoding="UTF-8">-->
+<!--      <directory>.idea</directory>-->
+<!--      <includes>-->
+<!--        <include>**/*.xml</include>-->
+<!--      </includes>-->
+<!--    </fileSet>-->
+    <fileSet filtered="true" encoding="UTF-8">
+      <directory>api-tests-karate/src</directory>
+      <includes>
+        <include>**/*.java</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="true" encoding="UTF-8">
+      <directory>java/src</directory>
+      <includes>
+        <include>**/*.java</include>
+        <include>**/*.xml</include>
+        <include>**/*.properties</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="true" encoding="UTF-8">
+      <directory>api-tests/.mvn</directory>
+      <includes>
+        <include>**/*.properties</include>
+      </includes>
+    </fileSet>
+    <fileSet encoding="UTF-8">
+      <directory>deploy/k8s</directory>
+      <includes>
+        <include>**/*.yml</include>
+      </includes>
+    </fileSet>
+    <fileSet encoding="UTF-8">
+      <directory>api-tests-karate</directory>
+      <includes>
+        <include>**/*.</include>
+        <include>**/*.md</include>
+        <include>**/*.cmd</include>
+      </includes>
+    </fileSet>
+    <fileSet encoding="UTF-8">
+      <directory>java</directory>
+      <includes>
+        <include>**/Dockerfile</include>
+        <include>**/*.</include>
+        <include>**/*.gitignore</include>
+        <include>**/*.cmd</include>
+        <include>**/*.config</include>
+      </includes>
+    </fileSet>
+    <fileSet encoding="UTF-8">
+      <directory>build/azDevOps</directory>
+      <includes>
+        <include>**/*.yml</include>
+        <include>**/*.json</include>
+        <include>**/*.js</include>
+      </includes>
+    </fileSet>
+<!--    <fileSet encoding="UTF-8">-->
+<!--      <directory>.github</directory>-->
+<!--      <includes>-->
+<!--        <include>**/*.md</include>-->
+<!--        <include>**/*.yml</include>-->
+<!--      </includes>-->
+<!--    </fileSet>-->
+    <fileSet encoding="UTF-8">
+      <directory>api-tests/.mvn</directory>
+      <includes>
+        <include>**/*.jar</include>
+      </includes>
+    </fileSet>
+    <fileSet encoding="UTF-8">
+      <directory>deploy/azure</directory>
+      <includes>
+        <include>**/*.tf</include>
+      </includes>
+    </fileSet>
+    <fileSet encoding="UTF-8">
+      <directory>api-tests</directory>
+      <includes>
+        <include>**/*.</include>
+        <include>**/*.artifactignore</include>
+        <include>**/*.md</include>
+        <include>**/*.cmd</include>
+      </includes>
+    </fileSet>
+    <fileSet encoding="UTF-8">
+      <directory>api-tests/src</directory>
+      <includes>
+        <include>**/*.feature</include>
+        <include>**/*.md</include>
+        <include>**/*.json</include>
+        <include>**/*.conf</include>
+      </includes>
+    </fileSet>
+    <fileSet encoding="UTF-8">
+      <directory>api-tests-karate/.mvn</directory>
+      <includes>
+        <include>**/*.jar</include>
+      </includes>
+    </fileSet>
+    <fileSet encoding="UTF-8">
+      <directory>build/jenkins</directory>
+      <includes>
+        <include>**/*.Jenkinsfile</include>
+      </includes>
+    </fileSet>
+    <fileSet encoding="UTF-8">
+      <directory>java/.mvn</directory>
+      <includes>
+        <include>**/*.jar</include>
+      </includes>
+    </fileSet>
+<!--    <fileSet encoding="UTF-8">-->
+<!--      <directory>.idea</directory>-->
+<!--      <includes>-->
+<!--        <include>**/*.gitignore</include>-->
+<!--        <include>**/*.iml</include>-->
+<!--      </includes>-->
+<!--    </fileSet>-->
+    <fileSet encoding="UTF-8">
+      <directory>api-tests-karate/src</directory>
+      <includes>
+        <include>**/*.feature</include>
+        <include>**/*.js</include>
+      </includes>
+    </fileSet>
+    <fileSet encoding="UTF-8">
+      <directory>java/src</directory>
+      <includes>
+        <include>**/*.yml</include>
+      </includes>
+    </fileSet>
+    <fileSet encoding="UTF-8">
+      <directory></directory>
+      <includes>
+        <include>yamllint.conf</include>
+        <include>README.md</include>
+<!--        <include>.gitignore</include>-->
+<!--        <include>.gitattributes</include>-->
+      </includes>
+    </fileSet>
+  </fileSets>
+</archetype-descriptor>
