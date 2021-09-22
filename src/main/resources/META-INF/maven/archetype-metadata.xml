@@ -94,6 +94,7 @@
         <include>**/*.</include>
         <include>**/*.md</include>
         <include>**/*.cmd</include>
+        <include>**/mvnw</include>
       </includes>
     </fileSet>
     <fileSet encoding="UTF-8">
@@ -104,6 +105,7 @@
         <include>**/*.gitignore</include>
         <include>**/*.cmd</include>
         <include>**/*.config</include>
+        <include>**/mvnw</include>
       </includes>
     </fileSet>
     <fileSet encoding="UTF-8">
