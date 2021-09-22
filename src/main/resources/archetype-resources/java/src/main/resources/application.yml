@@ -9,7 +9,6 @@ server:
   # Note: ONLY use this if you're behind a trusted Reverse Proxy, such as Application Gateway.
   # If you host this app directly then users can easily inject headers.
   forward-headers-strategy: framework
-  #######
   port: 9000
 
 management:
